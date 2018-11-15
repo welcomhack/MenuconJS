@@ -1,0 +1,106 @@
+
+
+body{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: initial;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/teclado.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* ///// Menu de amburguesa ////////// */
+#menuToggle{
+    width: 50px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 5px;
+    left: 5px;
+    border-radius: 5px;
+    
+}
+#menuToggle:hover{
+    box-shadow: 0 5px 5px rgba(0,0,0,.6);transform: scale(1.1)
+}
+.openMenu,
+.closeMenu{
+    transition: transform .25s;
+    transform-origin: center;
+
+}
+.openMenu{
+    fill: rgb(6, 134, 255);
+    transition: transform .25s;
+}
+
+.closeMenu{
+    opacity: 0;
+    fill: red;
+    transform: scale(0);
+}
+.menuIsOpen .closeMenu{
+    opacity: 1;
+    transform: scale(1);
+ 
+}
+.menuIsOpen .openMenu{
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* ////// Munu ////////// */
+
+.menuContainer{
+    background: rgba(100,100,100, .55);
+    height: 60%;
+    width: 80%;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform .25s;
+    transform-origin: top left;
+    box-shadow: 0 5px 5px rgba(0,0,0,.6);
+}
+.onBody .menuContainer{
+    opacity: 1;
+    transform: scale(1);
+}
+.menu{
+    position: relative;
+    width: 100%;
+    float: left;
+    margin: 60px 0px;
+    padding: 0;
+    list-style: none;
+}
+.menuItem{
+    font-size: 1.4em;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(0,0,0, .25);
+    margin: 0;
+    transition:.25s;
+    
+}
+.menuItem:hover{
+    background: rgb(6, 134, 255);
+    font-size: 2em;
+}
+.link{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.2em;
+    min-width: fit-content;
+    padding: .4em;
+}

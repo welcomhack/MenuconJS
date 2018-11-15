@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/responsiv.css">
+    <title>BannerC</title>
+</head>
+<body>
+    <!-- d="" (define los puntos) 
+         M0,0 (mueve el punto a la posicion 0,0[x & y])
+         H400 (horizontal 400 puntos del viewBox)
+         V100 (vertical 100 puntos del viewBox)
+         Lx,y (lateral en x & y)
+         Q (vesier cuadratico punto de control[x,y] punto final[x,y])
+         T (reflejo [x,y])
+         Z (cierra la linea)-->
+    <svg class="banner" viewBox="0 0 400 100">
+            <!-- El bloque "defs" no se muestra en pantalla -->
+
+            <!--/////// En svg se usa fill en lugar de color  ////////-->
+        <defs>
+            <linearGradient id="gradiente">
+                <stop offset="0%" stop-color="darkRed"/>
+                <stop offset="100%" stop-color="tomato"/>
+            </linearGradient>
+        </defs>
+
+
+        <path class="path" d="M0,0 H400 V100 L0,80 Z" fill="url(#gradiente)" />
+        
+        <text class="text" x="50%" y="50%" text-anchor="middle">
+            Banner
+        </text>
+
+    </svg>
+    <svg class="banner" viewBox="0 0 400 100">
+
+        <path class="path" d="M0,0 H400 V80 Q320,110 200,90 T0,100 Z" fill="url(#gradiente)" />
+
+        <text class="text" x="50%" y="50%" text-anchor="middle">
+            welcomhack
+        </text>
+
+    </svg>
+</body>
+</html>

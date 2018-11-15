@@ -1,0 +1,74 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.svg{
+    background: tomato;
+}
+.text{
+    font-weight: bold;
+    font-size: 2em;
+    fill: #fff;
+}
+.banner{
+    background: rgb(3, 163, 163);
+}
+
+/*Animaciones //////////////7///////
+*/
+
+.layer{
+    animation: logoAnime 2s infinite;
+} 
+
+@keyframes logoAnime{
+    0%{
+        /*2turn (2 bueltas)*/
+        transform: rotate(-2turn);
+    }
+}
+.cls-1{
+    animation: loader1 2s infinite;
+}
+.cls-2{
+    animation: loader2 2s infinite;
+}
+.cls-3{
+    animation: loader3 2s infinite;
+}
+
+@keyframes loader1{
+    0%{
+        opacity: .5;
+    }
+    25%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes loader2{
+    0% ,25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes loader3{
+    0%,50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}

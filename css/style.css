@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.circl{
+    animation: anime 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.rect{
+    position: relative;
+    fill: brown;
+}
+
+.rect::before{
+    content: "";
+    fill: blue;
+    width: 150px;
+    height: 50px;
+    transform: rotateZ(-90deg);
+}
+
